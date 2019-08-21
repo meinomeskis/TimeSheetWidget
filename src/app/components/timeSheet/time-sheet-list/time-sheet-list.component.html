@@ -1,0 +1,20 @@
+<div class="timeSheetList noSelect">
+  <div *ngFor="let item of ListItems;">
+    <div class="listHeader">
+      <div class="item">
+        <i class="material-icons itemIcon">{{item.icon}}</i>
+        <div class="itemLeftTitle">{{item.headerLeftTitle}}</div>
+      </div>
+      <div class="item itemRightTitle">{{item.headerRightTitle}}</div>
+    </div>
+    <div class="listContent">
+      <div class="listContentHeader">
+        <div *ngFor="let column of item.columns; let colIndex = index"
+          [ngClass]="colIndex === 0 ? 'listContentFirstItem':''">{{column}}</div>
+      </div>
+      <div class="listContentItems" *ngFor="let dataRow of item.data;" >
+        <div  *ngFor="let cell of dataRow;  let colIndex = index" [ngClass]="colIndex === 0 ? 'listContentFirstItem':''">{{cell}}</div>
+      </div>
+    </div>
+  </div>
+</div>

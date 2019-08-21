@@ -1,0 +1,36 @@
+<div class="timeSheetCalendar">
+
+  <div class="header">
+    <span class="headerTitle">
+        <button mat-button (click)="picker.open()">{{currentDate}}</button>
+        <input [matDatepicker]="picker" type="hidden" (dateInput)="selectedDate($event)">
+        <mat-datepicker #picker></mat-datepicker>  
+       </span>
+    <div>
+      <button mat-button (click)="selectToday()">
+        <i class="material-icons">event</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="calendarList noSelect">
+    <div class="day" [ngClass]="item.isWeekend ? 'weekend' : ''" *ngFor="let item of week; let i = index"
+      (click)="activateDate(item.id)">
+      <div class=" weekName">
+        {{item.weekName}}
+      </div>
+      <div [ngClass]="getState(item)" class=" monthNumber">
+        {{item.dayOfMonth}}
+      </div>
+      <div class=" workHours">
+        {{item.durationText}}
+      </div>
+
+      <div class="statusDot" [ngClass]="getTaskStatusStyle(item.dayStatus)">-</div>
+
+
+    </div>
+
+
+  </div>
+</div>

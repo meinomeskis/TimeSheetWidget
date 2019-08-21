@@ -1,0 +1,66 @@
+@import "./../base.scss";
+
+.timeSheetList {
+
+  .listHeader {
+    background: rgb(243, 243, 244);
+    height: 32px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 8px;
+
+    .item {
+      display: flex;
+      padding-right: 8px;
+      align-items: center;
+    }
+
+    .itemIcon {
+      padding-right: 8px;
+    }
+
+    .itemLeftTitle {
+      font-weight: 500;
+      font-size: $mw-fontSize2;
+    }
+
+    .itemRightTitle {
+      font-weight: 500;
+      font-size: $mw-fontSize1;
+      color: $mw-fontColorGray;
+    }
+  }
+
+  .listContent {
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0px 8px 0px 8px;
+
+    .listContentHeader {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      font-size: $mw-fontSize1;
+      color: $mw-fontColorGray;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .listContentFirstItem {
+      flex: 0 0 50%;
+    }
+
+    .listContentItems {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      font-size: $mw-fontSize2;
+      color: rgb(0, 0, 0);
+      margin-bottom: 8px;
+    }
+  }
+
+}

@@ -1,0 +1,62 @@
+
+.background {
+  background-color: rgb(243, 243, 244)
+}
+ 
+
+.timeSheet {
+  max-width: 400px;
+  // background-color: rgba(0, 128, 0, 0.014);  
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+
+  .header {
+    height: 216px;
+    background-color: rgba(255, 0, 0, 0.007);
+  
+    .calendarContainer {
+      height: 152px; 
+    }
+
+    .headerInfo{
+      height: 64px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+  }
+
+  .content {
+    min-height: 300px;
+    max-height: 300px;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow-y: scroll; 
+    /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; 
+  }
+
+  .bottom { 
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    flex: 100%;
+    align-self: stretch;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0px; 
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}

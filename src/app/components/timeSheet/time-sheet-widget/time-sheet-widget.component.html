@@ -1,0 +1,21 @@
+<mat-card class="timeSheet">
+  <div class="header">
+    <div class="calendarContainer">
+      <app-time-sheet-calendar></app-time-sheet-calendar>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="headerInfo">
+      <div>{{getDate()}}</div>
+      <div> <button mat-button color="primary">Go to time sheet</button></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <app-time-sheet-list></app-time-sheet-list>
+  </div>
+
+  <div class="bottom">
+
+    <button mat-raised-button color="primary" (click)="addTask()">Add task</button>
+  </div>
+</mat-card>

@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@import '~@angular/material/theming';
+@include mat-core();
+@import '~/../app/components/timeSheet/base.scss';
+
+$my-app-primary: mat-palette($mat-orange);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} 
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}

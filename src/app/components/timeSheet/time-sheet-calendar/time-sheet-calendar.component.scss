@@ -1,0 +1,105 @@
+@import './../base.scss';
+
+.timeSheetCalendar {
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    justify-content: space-between;
+  }
+
+  .headerTitle {
+    align-self: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+
+  .calendarList {
+    display: flex;
+    flex-direction: row;
+
+    .weekend {
+      color: $mw-fontColorGray;
+    }
+
+    .day {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      .dayItem { 
+        margin-bottom: 10px;
+        display: flex;
+      }
+
+      .weekName {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .monthNumber {
+        padding: 3px;
+        font-size: 16px;
+        margin-bottom: 6px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+
+      .active {
+        background-color: $mw-color;
+        border-radius: 4px;
+      }
+
+      .today {
+        border: 1px solid $mw-color;
+        border-radius: $mw-border-radius;
+      }
+
+
+      .workHours {
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .statusDot {
+        height: 5px;
+        width: 5px;
+        background-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        color: transparent;
+      }
+
+      .red {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .green {
+        background-color: #05ff05;
+      }
+
+      .gray {
+        background-color: gray;
+      }
+
+      .none {
+        background-color: transparent;
+        color: black;
+      }
+
+
+
+
+    }
+
+
+
+
+  }
+}
